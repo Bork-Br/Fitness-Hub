@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang=”pt-BR”>
+<head>
+ <meta charset=”UTF-8”>
+ <meta name=”viewport” content=”width=device-width, initial-scale=1.0”>
+ <title>Fitness HUB – Tudo para seu condicionamento físico em Santa Luzia</title>
+ <script src=https://cdn.tailwindcss.com></script>
+ <link rel=”stylesheet” href=https://cdnjs.cloudflare.com/ajax/libs/fontawesome/6.4.0/css/all.min.css>
+ <style>
+ .hero-gradient {
+ Background: linear-gradient(135deg, #1e3a8a 0%, #10b981 100%);
+ }
+ .exercise-card:hover {
+ Transform: translateY(-5px);
+ Box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0,
+0.04);
+ }
+ .nutrition-table tr:nth-child(even) {
+ Background-color: #f3f4f6;
+ }
+ .community-post:hover {
+ Background-color: #f9fafb;
+ }
+ .video-thumbnail::after {
+ Content: “”;
+ Position: absolute;
+ Top: 0;
+ Left: 0;
+ Width: 100%;
+ Height: 100%;
+ Background: rgba(0, 0, 0, 0.3);
+ Transition: all 0.3s ease;
+ }
+ .video-thumbnail:hover::after {
+ Background: rgba(0, 0, 0, 0.1);
+ }
+ .play-button {
+ Position: absolute;
+ Top: 50%;
+ Left: 50%;
+ Transform: translate(-50%, -50%);
+ Width: 60px;
+ Height: 60px;
+ Background: rgba(255, 255, 255, 0.8);
+ Border-radius: 50%;
+ Display: flex;
+ Justify-content: center;
+ Align-items: center;
+ z-index: 10;
+ }
+ </style>
+</head>
+<body class=”font-sans bg-gray-50”>
+ <!—Header/Navbar →
+ <header class=”bg-white shadow-md sticky top-0 z-50”>
+ <div class=”container mx-auto px-4 py-3 flex justify-between items-center”>
+ <div class=”flex items-center space-x-2”>
+ <i class=”faz fa-dumbbell text-blue-600 text-2xl”></i>
+ <h1 class=”text-xl font-bold text-gray-800”>Fitness <span class=”text-blue600”>HUB</span></h1>
+ </div>
+ <nav class=”hidden md:flex space-x-8”>
+ <a href=”#exercicios” class=”text-gray-700 hover:text-blue-600 fontmedium”>Exercícios</a>
+ <a href=”#comunidade” class=”text-gray-700 hover:text-blue-600 fontmedium”>Comunidade</a>
+ <a href=”#videos” class=”text-gray-700 hover:text-blue-600 fontmedium”>Vídeo Aulas</a>
+ <a href=”#nutricao” class=”text-gray-700 hover:text-blue-600 fontmedium”>Nutrição</a>
+ <a href=”#dicas” class=”text-gray-700 hover:text-blue-600 fontmedium”>Dicas</a>
+ </nav>
+ <div class=”flex items-center space-x-4”>
+ <button class=”md:hidden text-gray-700”>
+ <i class=”faz fa-bars text-xl”></i>
+ </button>
+ <button class=”hidden md:block bg-blue-600 text-white px-4 py-2 rounded-lg
+hover:bg-blue-700 transition”>
+ <i class=”faz fa-user-plus mr-2”></i>Cadastre-se
+ </button>
+ </div>
+ </div>
+ </header>
+ <!—Hero Section →
+ <section class=”hero-gradient text-white py-16”>
+ <div class=”container mx-auto px-4 flex flex-col md:flex-row items-center”>
+ <div class=”md:w-1/2 mb-8 md:mb-0”>
+ <h2 class=”text-4xl md:text-5xl font-bold mb-4”>Transforme seu corpo em
+Santa Luzia</h2>
+ <p class=”text-lg mb-6”>A plataforma completa para sua jornada fitness com
+a comunidade ativa de Santa Luzia, MG.</p>
+ <div class=”flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4”>
+ <button class=”bg-white text-blue-600 px-6 py-3 rounded-lg font-medium
+hover:bg-gray-100 transition”>
+ Comece Agora <i class=”faz fa-arrow-right ml-2”></i>
+ </button>
+ <button class=”border-2 border-white text-white px-6 py-3 rounded-lg fontmedium hover:bg-white hover:text-blue-600 transition”>
+ <i class=”faz fa-play-circle mr-2”></i>Assista Vídeos
+ </button>
+ </div>
+ <div class=”mt-8 flex items-center space-x-4”>
+ <div class=”flex -space-x-2”>
+ <img src=https://randomuser.me/api/portraits/women/44.jpg class=”w-10
+h-10 rounded-full border-2 border-white” alt=”Membro”>
+ <img src=https://randomuser.me/api/portraits/men/32.jpg class=”w-10 h10 rounded-full border-2 border-white” alt=”Membro”>
+ <img src=https://randomuser.me/api/portraits/women/68.jpg class=”w-10
+h-10 rounded-full border-2 border-white” alt=”Membro”>
+ </div>
+ <p>+500 membros ativos em Santa Luzia</p>
+ </div>
+ </div>
+ <div class=”md:w-1/2 flex justify-center”>
+ <img src=https://images.unsplash.com/photo-1571019613454-
+1cb2f99b2d8b?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto
+=format&fit=crop&w=800&q=80
+ Alt=”Pessoa se exercitando”
+ Class=”rounded-xl shadow-2xl w-full max-w-md”>
+ </div>
+ </div>
+ </section>
+ <!—Features Section →
+ <section class=”py-12 bg-white”>
+ <div class=”container mx-auto px-4”>
+ <h2 class=”text-3xl font-bold text-center mb-12”>Tudo que você precisa em um
+só lugar</h2>
+ <div class=”grid grid-cols-1 md:grid-cols-3 gap-8”>
+ <div class=”bg-gray-50 p-6 rounded-xl text-center”>
+ <div class=”bg-blue-100 w-16 h-16 rounded-full flex items-center justifycenter mx-auto mb-4”>
+ <i class=”faz fa-running text-blue-600 text-2xl”></i>
+ </div>
+ <h3 class=”text-xl font-semibold mb-2”>Exercícios Personalizados</h3>
+ <p class=”text-gray-600”>Listas completas de exercícios para todos os
+níveis, desde iniciantes até avançados.</p>
+ </div>
+ <div class=”bg-gray-50 p-6 rounded-xl text-center”>
+ <div class=”bg-green-100 w-16 h-16 rounded-full flex items-center justifycenter mx-auto mb-4”>
+ <i class=”faz fa-users text-green-600 text-2xl”></i>
+ </div>
+ <h3 class=”text-xl font-semibold mb-2”>Comunidade Ativa</h3>
+ <p class=”text-gray-600”>Conecte-se com outros entusiastas do fitness
+em Santa Luzia e compartilhe suas conquistas.</p>
+ </div>
+ <div class=”bg-gray-50 p-6 rounded-xl text-center”>
+ <div class=”bg-purple-100 w-16 h-16 rounded-full flex items-center justifycenter mx-auto mb-4”>
+ <i class=”faz fa-utensils text-purple-600 text-2xl”></i>
+ </div>
+ <h3 class=”text-xl font-semibold mb-2”>Nutrição Especializada</h3>
+ <p class=”text-gray-600”>Tabelas nutricionais e planos alimentares
+desenvolvidos por especialistas locais.</p>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!—Exercises Section →
+ <section id=”exercicios” class=”py-12 bg-gray-50”>
+ <div class=”container mx-auto px-4”>
+ <div class=”flex justify-between items-center mb-8”>
+ <h2 class=”text-3xl font-bold”>Exercícios Populares</h2>
+ <a href=”#” class=”text-blue-600 hover:text-blue-800 font-medium”>Ver todos
+<i class=”faz fa-arrow-right ml-1”></i></a>
+ </div>
+ <div class=”grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6”>
+ <!—Exercise Card 1 →
+ <div class=”exercise-card bg-white rounded-xl overflow-hidden shadow-md
+transition duration-300”>
+ <div class=”relative h-48 overflow-hidden”>
+ <img src=https://images.unsplash.com/photo-1571019613454-
+1cb2f99b2d8b?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto
+=format&fit=crop&w=800&q=80
+ Alt=”Agachamento”
+ Class=”w-full h-full object-cover”>
+ <span class=”absolute top-3 left-3 bg-blue-600 text-white text-xs px-2
+py-1 rounded”>PERNAS</span>
+ </div>
+ <div class=”p-5”>
+ <h3 class=”text-xl font-bold mb-2”>Agachamento Livre</h3>
+ <p class=”text-gray-600 mb-4”>Exercício fundamental para fortalecer
+membros inferiores e core.</p>
+ <div class=”flex justify-between items-center”>
+ <div class=”flex space-x-2”>
+ <span class=”bg-gray-100 text-gray-800 text-xs px-2 py-1
+rounded”>3 séries</span>
+ <span class=”bg-gray-100 text-gray-800 text-xs px-2 py-1
+rounded”>12 repetições</span>
+ </div>
+ <button class=”text-blue-600 hover:text-blue-800”>
+ <i class=”far fa-bookmark”></i>
+ </button>
+ </div>
+ </div>
+ </div>
+
+ <!—Exercise Card 2 →
+ <div class=”exercise-card bg-white rounded-xl overflow-hidden shadow-md
+transition duration-300”>
+ <div class=”relative h-48 overflow-hidden”>
+ <img src=https://images.unsplash.com/photo-1571019613454-
+1cb2f99b2d8b?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto
+=format&fit=crop&w=800&q=80
+ Alt=”Flexão”
+ Class=”w-full h-full object-cover”>
+ <span class=”absolute top-3 left-3 bg-red-600 text-white text-xs px-2 py1 rounded”>PEITO</span>
+ </div>
+ <div class=”p-5”>
+ <h3 class=”text-xl font-bold mb-2”>Flexão de Braço</h3>
+ <p class=”text-gray-600 mb-4”>Excelente para desenvolver força no
+peitoral, ombros e tríceps.</p>
+ <div class=”flex justify-between items-center”>
+ <div class=”flex space-x-2”>
+ <span class=”bg-gray-100 text-gray-800 text-xs px-2 py-1
+rounded”>4 séries</span>
+ <span class=”bg-gray-100 text-gray-800 text-xs px-2 py-1
+rounded”>10 repetições</span>
+ </div>
+ <button class=”text-blue-600 hover:text-blue-800”>
+ <i class=”far fa-bookmark”></i>
+ </button>
+ </div>
+ </div>
+ </div>
+
+ <!—Exercise Card 3 →
+ <div class=”exercise-card bg-white rounded-xl overflow-hidden shadow-md
+transition duration-300”>
+ <div class=”relative h-48 overflow-hidden”>
+ <img src=https://images.unsplash.com/photo-1571019613454-
+1cb2f99b2d8b?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto
+=format&fit=crop&w=800&q=80
+ Alt=”Prancha”
+ Class=”w-full h-full object-cover”>
+ <span class=”absolute top-3 left-3 bg-yellow-600 text-white text-xs px-2
+py-1 rounded”>ABDOMEN</span>
+ </div>
+ <div class=”p-5”>
+ <h3 class=”text-xl font-bold mb-2”>Prancha Abdominal</h3>
+ <p class=”text-gray-600 mb-4”>Melhore sua resistência e fortaleça todo
+o core com este exercício isométrico.</p>
+ <div class=”flex justify-between items-center”>
+ <div class=”flex space-x-2”>
+ <span class=”bg-gray-100 text-gray-800 text-xs px-2 py-1
+rounded”>3 séries</span>
+ <span class=”bg-gray-100 text-gray-800 text-xs px-2 py-1
+rounded”>30 segundos</span>
+ </div>
+ <button class=”text-blue-600 hover:text-blue-800”>
+ <i class=”far fa-bookmark”></i>
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!—Community Section →
+ <section id=”comunidade” class=”py-12 bg-white”>
+ <div class=”container mx-auto px-4”>
+ <div class=”flex justify-between items-center mb-8”>
+ <h2 class=”text-3xl font-bold”>Comunidade Fitness HUB</h2>
+ <a href=”#” class=”text-blue-600 hover:text-blue-800 font-medium”>Ver todos
+<i class=”faz fa-arrow-right ml-1”></i></a>
+ </div>
+
+ <div class=”bg-gray-50 rounded-xl p-6 mb-8”>
+ <div class=”flex items-start space-x-4”>
+ <img src=https://randomuser.me/api/portraits/women/44.jpg class=”w-12
+h-12 rounded-full” alt=”Usuário”>
+ <div class=”flex-1”>
+ <textarea class=”w-full p-3 border border-gray-300 rounded-lg
+focus:outline-none focus:ring-2 focus:ring-blue-500”
+ Placeholder=”Compartilhe sua conquista com a comunidade de
+Santa Luzia...”></textarea>
+ <div class=”flex justify-between items-center mt-2”>
+ <div class=”flex space-x-2”>
+ <button class=”text-gray-500 hover:text-blue-600”>
+ <i class=”far fa-image”></i>
+ </button>
+ <button class=”text-gray-500 hover:text-blue-600”>
+ <i class=”faz fa-video”></i>
+ </button>
+ </div>
+ <button class=”bg-blue-600 text-white px-4 py-2 rounded-lg hover:bgblue-700”>
+ Publicar
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <div class=”space-y-6”>
+ <!—Community Post 1 →
+ <div class=”community-post bg-white border border-gray-200 rounded-xl p-5
+shadow-sm transition”>
+ <div class=”flex items-start space-x-4”>
+ <img src=https://randomuser.me/api/portraits/men/32.jpg class=”w-12 h12 rounded-full” alt=”Usuário”>
+ <div>
+ <h4 class=”font-bold”>Carlos Silva</h4>
+ <p class=”text-gray-500 text-sm”>Santa Luzia, MG • 2 horas
+atrás</p>
+ <p class=”mt-2”>Finalmente consegui fazer 20 flexões seguidas!
+Quando comecei no Fitness HUB só conseguia fazer 5. Obrigado pelas dicas da
+comunidade!</p>
+ <div class=”flex items-center mt-4 space-x-4”>
+ <button class=”flex items-center text-gray-500 hover:text-blue600”>
+ <i class=”far fa-thumbs-up mr-1”></i> 24
+ </button>
+ <button class=”flex items-center text-gray-500 hover:text-blue600”>
+ <i class=”far fa-comment mr-1”></i> 5 comentários
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+
+ <!—Community Post 2 →
+ <div class=”community-post bg-white border border-gray-200 rounded-xl p-5
+shadow-sm transition”>
+ <div class=”flex items-start space-x-4”>
+ <img src=https://randomuser.me/api/portraits/women/68.jpg class=”w-12
+h-12 rounded-full” alt=”Usuário”>
+ <div>
+ <h4 class=”font-bold”>Ana Paula</h4>
+ <p class=”text-gray-500 text-sm”>Santa Luzia, MG • Ontem</p>
+ <p class=”mt-2”>Alguém conhece uma boa nutricionista aqui em
+Santa Luzia? Quero complementar meus exercícios com uma alimentação mais
+balanceada.</p>
+ <div class=”flex items-center mt-4 space-x-4”>
+ <button class=”flex items-center text-gray-500 hover:text-blue600”>
+ <i class=”far fa-thumbs-up mr-1”></i> 12
+ </button>
+ <button class=”flex items-center text-gray-500 hover:text-blue600”>
+ <i class=”far fa-comment mr-1”></i> 8 comentários
+ </button>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!—Video Classes Section →
+ <section id=”videos” class=”py-12 bg-gray-50”>
+ <div class=”container mx-auto px-4”>
+ <div class=”flex justify-between items-center mb-8”>
+ <h2 class=”text-3xl font-bold”>Vídeo Aulas Exclusivas</h2>
+ <a href=”#” class=”text-blue-600 hover:text-blue-800 font-medium”>Ver todos
+<i class=”faz fa-arrow-right ml-1”></i></a>
+ </div>
+
+ <div class=”grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6”>
+ <!—Video 1 →
+ <div class=”bg-white rounded-xl overflow-hidden shadow-md”>
+ <div class=”relative video-thumbnail”>
+ <img src=https://images.unsplash.com/photo-1571019613454-
+1cb2f99b2d8b?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto
+=format&fit=crop&w=800&q=80
+ Alt=”Treino em casa”
+ Class=”w-full h-48 object-cover”>
+ <div class=”play-button”>
+ <i class=”faz fa-play text-blue-600 text-xl”></i>
+ </div>
+ <span class=”absolute bottom-2 right-2 bg-black bg-opacity-70 textwhite text-xs px-2 py-1 rounded”>12:34</span>
+ </div>
+ <div class=”p-5”>
+ <h3 class=”font-bold text-lg mb-2”>Treino Completo em Casa –
+Iniciante</h3>
+ <p class=”text-gray-600 text-sm mb-3”>Aprenda um treino completo
+que pode ser feito em casa sem equipamentos.</p>
+ <div class=”flex items-center text-gray-500 text-sm”>
+ <i class=”faz fa-eye mr-1”></i> 1.2K visualizações
+ <span class=”mx-2”>•</span>
+ <i class=”far fa-calendar-alt mr-1”></i> 1 semana atrás
+ </div>
+ </div>
+ </div>
+
+ <!—Video 2 →
+ <div class=”bg-white rounded-xl overflow-hidden shadow-md”>
+ <div class=”relative video-thumbnail”>
+ <img src=https://images.unsplash.com/photo-1571019613454-
+1cb2f99b2d8b?ixlib=rb4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto
+=format&fit=crop&w=800&q=80
+ Alt=”Alongamento”
+ Class=”w-full h-48 object-cover”>
+ <div class=”play-button”>
+ <i class=”faz fa-play text-blue-600 text-xl”></i>
+ </div>
+ <span class=”absolute bottom-2 right-2 bg-black bg-opacity-70 textwhite
